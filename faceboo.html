@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Username Entry</title>
+    <!-- Font Awesome for Facebook icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #eceff5; /* Background color complementing Facebook */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #facebook-icon {
+            font-size: 50px;
+            color: #1877f2; /* Facebook color */
+            margin-bottom: 10px;
+        }
+
+        #username-input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        #submit-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #1877f2; /* Facebook color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #search-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #1877f2; /* Facebook color */
+        }
+    </style>
+</head>
+<body>
+    <div id="facebook-icon">
+        <i class="fab fa-facebook"></i>
+    </div>
+    <form id="username-form">
+        <input type="text" id="username-input" placeholder="Enter your Facebook username" required>
+        <br>
+        <button type="submit" id="submit-button">Submit</button>
+    </form>
+
+    <p id="search-message">Search completed! Display your message here.</p>
+
+    <script>
+        document.getElementById('username-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get the typed username
+            var username = document.getElementById('username-input').value;
+            
+            // Do something with the username, for example, log it to the console
+            console.log('Typed username:', username);
+            
+            // Display the search completion message
+            document.getElementById('search-message').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
